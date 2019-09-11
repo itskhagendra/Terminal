@@ -1,0 +1,42 @@
+body {
+  color: white;
+  margin: 0;
+  background-color: black;
+}
+
+p {
+  margin: 0;
+  padding-right: 5px;
+}
+
+.history {
+  width: 100%;
+}
+
+.root {
+  color: greenyellow;
+  width: 100%;
+}
+
+.terminal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+input {
+  background: black;
+  color: white;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  outline-style: none;
+  border: 0;
+  width: 80%;
+  caret-color: green;
+}
+
+input :focus {
+  outline-style: none;
+}
+/*# sourceMappingURL=terminal.css.map */

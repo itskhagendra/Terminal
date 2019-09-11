@@ -1,0 +1,34 @@
+body{
+    color: white;
+    margin: 0;
+    background-color: black;
+}
+p{
+    margin: 0;
+    padding-right: 5px;
+
+}
+.history
+{
+    width:100%;
+}
+.root{
+    color:greenyellow;
+    width: 100%;
+}
+.terminal{
+    //padding:10px;
+    display: flex;
+}
+input{
+    background: black;
+    color: white;
+    display: inline-flex;
+    outline-style: none;
+    border:0;
+    width: 80%;
+    caret-color: green;
+    :focus{
+        outline-style: none;
+    }
+}
