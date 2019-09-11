@@ -12,8 +12,6 @@ input.addEventListener('keydown',function(event){
     if(event.key==="Enter")
     {
         log.innerHTML = log.innerHTML+'<p><span class="root">'+id+dir+"</span> &nbsp&nbsp&nbsp"+input.value+'</br>'+result+'</p>'
-        console.log(input.value)
-        console.log("Bakchodi Nahi")
         input.value=""
     }
 })

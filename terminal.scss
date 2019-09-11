@@ -19,6 +19,7 @@ p{
 .terminal{
     //padding:10px;
     display: flex;
+    width: 100%;
 }
 input{
     background: black;
@@ -26,6 +27,9 @@ input{
     display: inline-flex;
     outline-style: none;
     border:0;
+    flex:1;
+    flex-wrap: wrap;
+    overflow-wrap: break-word;
     width: 80%;
     caret-color: green;
     :focus{
