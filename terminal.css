@@ -2,11 +2,12 @@ body {
   color: white;
   margin: 0;
   background-color: black;
+  overflow-x: hidden;
 }
 
 p {
   margin: 0;
-  padding-right: 5px;
+  padding: 5px 5px 0 0;
 }
 
 .history {
@@ -25,9 +26,14 @@ p {
   width: 100%;
 }
 
+.error {
+  color: red;
+}
+
 input {
   background: black;
   color: white;
+  padding: 5px 5px 0 0;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -45,5 +51,9 @@ input {
 
 input :focus {
   outline-style: none;
+}
+
+.response {
+  padding-left: 10px;
 }
 /*# sourceMappingURL=terminal.css.map */
