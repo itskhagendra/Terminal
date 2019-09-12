@@ -6,7 +6,7 @@ let result = "",
     coun = 0,
     status = false,
     cls = false;
-const commands = ['help', 'about', 'version', 'clear', 'personal_Info', 'skills'];
+const commands = ['help', 'about', 'version', 'clear', 'personal_Info', 'skills','gui'];
 const id = "[system@guest ~ ]",
     dir = "",
     input = document.getElementById('command'),
@@ -51,6 +51,11 @@ input.addEventListener('keydown', function (event) {
                     result = "<p class='response'>My skills are as follows:" + dict_parser(skills) +
                         "</p>"
                     break
+                }
+                case 'gui':
+                    {
+                        window.open("http://khagendra.ml","_blank")
+                    break;
                 }
                 default: {
                     result = "<p class='response'>Not implemented as of now, please Try again in the next upadate</br></p>"
