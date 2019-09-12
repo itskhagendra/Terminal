@@ -3,10 +3,10 @@ let result = "",
     args = 0,
     user_input = [],
     current_command = [],
-    coun=0,
+    coun = 0,
     status = false,
     cls = false;
-const commands = ['help', 'about', 'version', 'clear', 'personal_Info','skills'];
+const commands = ['help', 'about', 'version', 'clear', 'personal_Info', 'skills'];
 const id = "[system@guest ~ ]",
     dir = "",
     input = document.getElementById('command'),
@@ -18,10 +18,10 @@ input.addEventListener('keydown', function (event) {
         status = false
         current_command[coun] = input.value
         user_input = input.value.split(' ')
-        args = user_input.splice(1,user_input.length)
-        result = "" 
+        args = user_input.splice(1, user_input.length)
+        result = ""
         status = commands.includes(user_input[0])
-        if (status == true && args.length<=0) {
+        if (status == true && args.length <= 0) {
             switch (user_input[0]) {
                 case 'help': {
                     result = "<p class='response'>COMMANDS<br>"
@@ -44,12 +44,12 @@ input.addEventListener('keydown', function (event) {
                     break
                 }
                 case 'personal_Info': {
-                    result = "<p class='response'>Personal Information"+dict_parser(personal_info)+"</p>"
+                    result = "<p class='response'>Personal Information" + dict_parser(personal_info) + "</p>"
                     break
                 }
                 case 'skills': {
-                    result = "<p class='response'>My skills are as follows:"+dict_parser(skills)
-                    +"</p>"
+                    result = "<p class='response'>My skills are as follows:" + dict_parser(skills) +
+                        "</p>"
                     break
                 }
                 default: {
@@ -58,11 +58,9 @@ input.addEventListener('keydown', function (event) {
                 }
             }
 
-        }
-        else if(status==true && args.length>0) {
+        } else if (status == true && args.length > 0) {
             result = "<p class='error response'>" + "`" + args + "`" + ":is not a valid argument</p>"
-        }
-        else {
+        } else {
             result = "<p class='error response'>" + "`" + current_command[coun] + "`" + ":is not recognized as an internal or external command, operable program or batch file.</p>"
         }
         if (cls) {
@@ -74,18 +72,16 @@ input.addEventListener('keydown', function (event) {
         }
         input.value = ""
         input.scrollIntoView(true);
-        coun= coun+1
+        coun = coun + 1
         pointer = coun
         // console.log(coun)
     }
-    if(event.keyCode==38)
-    {
-        if(pointer>0)
-        {
-            pointer = pointer-1;
+    if (event.keyCode == 38) {
+        if (pointer > 0) {
+            pointer = pointer - 1;
             // console.log(current_command[pointer])
-            input.value= current_command[pointer]
+            input.value = current_command[pointer]
         }
     }
-    
+
 })
