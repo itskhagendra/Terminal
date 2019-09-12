@@ -10,8 +10,9 @@
 </head>
 
 <body>
+    <!--ASCII Art Start-->
     <div class="Art">
-        <pre> 
+        <pre>
                    _,-""`""-~`)
                 (`~           \
                  |     a   a   \
@@ -36,15 +37,27 @@
 | $$\  $$ | $$  | $$| $$  | $$| $$  \ $$| $$      | $$\  $$$| $$  | $$| $$  \ $$| $$  | $$      | $$\  $$ | $$  | $$| $$\  $ | $$| $$  | $$| $$  \ $$
 | $$ \  $$| $$  | $$| $$  | $$|  $$$$$$/| $$$$$$$$| $$ \  $$| $$$$$$$/| $$  | $$| $$  | $$      | $$ \  $$|  $$$$$$/| $$ \/  | $$| $$  | $$| $$  | $$
 |__/  \__/|__/  |__/|__/  |__/ \______/ |________/|__/  \__/|_______/ |__/  |__/|__/  |__/      |__/  \__/ \______/ |__/     |__/|__/  |__/|__/  |__/                                                                                                                                                
-</pre>
+        </pre>
     </div>
-    <div class="history" id=log>
-    </div>
-    <div class="terminal">
-        <p id="terminalText"><span class="root" id="user"></span></p>
-        <input type="text" id="command" onfocus="true"></input>
+    <!-- ASCII Art end -->
+
+    <div class="dumboo">
+        <p style="font-size: 1.5em" ><span style="font-weight: 800">"help" </span> Command will help you to get started with this Terminal.<br>If you still wish to use GUI version of the website please type or click on <a href="http://khagendra.ml" target="_blank"><span style="font-weight:800">"GUI"</span></a> to Open the conventional website</p>
     </div>
 
+    <!-- Command history log -->
+    <div class="history" id=log>
+    </div>
+    <!-- Command History Log ended -->
+
+    <!-- Core Terminal division -->
+    <div class="terminal">
+        <p id="terminalText"><span class="root" id="user"></span></p>
+        <input type="text" id="command" autofocus="autofocus"></input>
+    </div>
+    <!-- Terminal Divison End -->
+
+    <!-- critical Dependency -->
     <script src="index.js" id="command"></script>
 </body>
 
