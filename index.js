@@ -6,13 +6,15 @@ let result = "",
     coun = 0,
     status = false,
     cls = false;
-const commands = ['help', 'about', 'version', 'clear', 'personal_Info', 'skills','gui'];
+const commands = ['help', 'about', 'version', 'clear', 'personal_info', 'skills','gui'];
 const id = "[system@guest ~ ]",
     dir = "",
     input = document.getElementById('command'),
     log = document.getElementById('log');
 const user = document.getElementById('user').innerHTML = id + dir
-
+today = new Date()
+past = new Date(2019,04,01)
+experience = calcDate(today,past)
 input.addEventListener('keydown', function (event) {
     if (event.key === "Enter") {
         status = false
@@ -40,10 +42,10 @@ input.addEventListener('keydown', function (event) {
                     break;
                 }
                 case 'about': {
-                    result = "<p class='response'>I am a Deep Learning Engineer with 6+ Months of Experience of working in a product-based startup in Chennai, during that I developed multiple computer vision and NLP Applications completely for production. that did help the company to gain an initial push. I am looking forward to joining a team of enthusiastic people where I can nurture my skills and help the company to grow. </p>"
+                    result = "<p class='response'>I am a Deep Learning Engineer with "+ experience + " of Experience of working in a product-based startup in Chennai, during that I developed multiple computer vision and NLP Applications completely for production. that did help the company to gain an initial push. I am looking forward to joining a team of enthusiastic people where I can nurture my skills and help the company to grow. </p>"
                     break
                 }
-                case 'personal_Info': {
+                case 'personal_info': {
                     result = "<p class='response'>Personal Information" + dict_parser(personal_info) + "</p>"
                     break
                 }

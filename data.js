@@ -29,6 +29,26 @@ const commands_disc = ['help', 'about', 'version', 'clear', 'personal_Info','ski
 
 
 
+ // remember this is equivalent to 05 01 2019
+//dates in js are counted from 0, so 04 is May
+
+function calcDate(date1,date2) {
+    var diff = Math.floor(date1.getTime() - date2.getTime());
+    var day = 1000 * 60 * 60 * 24;
+    var days = Math.floor(diff/day);
+    var months = Math.floor(days/31);
+    var years = Math.floor(months/12);
+
+    var message = "";
+    //message += " was "
+    //message += days + " days "
+    if(years>0) 
+        message += years + "+ years"
+
+    message += months + " Months \n"
+
+    return message
+    }
 
 
 
