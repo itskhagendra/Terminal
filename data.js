@@ -10,11 +10,11 @@ function dict_parser(dict){
 
 let personal_info = {
     'Full Name' : 'Khagendra Kumar',
-    'D.O.B': '17-09-1996',
+    //'D.O.B': '17-09-1996',
     'Email': 'itskhagendra@hotmail.com',
     'Willing To relocate':'YES',
     'Location': 'Chennai',
-    'Relationship': 'None'
+    //'Relationship': 'None'
 }
 let skills = {
     'Languages': 'Python, C, C++, C#, Kotlin, JavaScript, PHP, Java',
@@ -43,7 +43,8 @@ function calcDate(date1,date2) {
     //message += " was "
     //message += days + " days "
     if(years>0) 
-        message += years + "+ years"
+        message += years + "+ years";
+        months -= 12;
 
     message += months + " Months \n"
 
